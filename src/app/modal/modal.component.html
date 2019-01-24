@@ -1,0 +1,15 @@
+<p-toast key="push" position="top-center" [baseZIndex]="5001"></p-toast>
+<p-toast key="modal" styleClass="modal" position="center" [modal]="true" [baseZIndex]="5000">
+    <ng-template *ngIf="!hasToken" let-message pTemplate="message">
+        <h3>닉네임?</h3>
+        <br>
+        <input pInputText id="register" type="text" [(ngModel)]="input" (keyup)="onKey($event)" autofocus autocomplete="off" />
+    </ng-template>
+    <ng-template *ngIf="hasToken" let-message pTemplate="message">
+        <div [style.visibility]="isQueueing ? 'visible' : 'hidden'">
+            <p-progressSpinner></p-progressSpinner>
+        </div>
+        <br>
+        <p-button label="Game Start" (click)="isQueueing ? queueStop() : queueStart()"></p-button>
+    </ng-template>
+</p-toast>

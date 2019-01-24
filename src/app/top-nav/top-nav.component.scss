@@ -1,0 +1,10 @@
+.TopNav {
+    cursor: default;
+    padding: 1rem;
+    color: white;
+    background: linear-gradient(to right, #c31432, #240b36);
+    font-size: 6rem;
+    &::selection {
+        color: rgba(0,0,0,0.0);
+    }
+}

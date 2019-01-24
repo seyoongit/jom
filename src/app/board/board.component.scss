@@ -1,0 +1,22 @@
+#root {
+    background: linear-gradient(to right, #c31432, #240b36);
+}
+.stone {
+    &:hover {
+        cursor: pointer;
+    }
+    &.empty {
+        background: rgba(255,255,255,0.2);
+        &:hover {
+            background: rgb(252, 225, 225);
+        }
+    }
+    &.me {
+        background: linear-gradient(to right top, blue, #6dd5fa, white);
+        cursor: default;
+    }
+    &.enemy {
+        background: linear-gradient(to top right, red, brown, white);
+        cursor: default;
+    }
+}

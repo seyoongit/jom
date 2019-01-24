@@ -1,0 +1,15 @@
+<div class="ui-g" id="root">
+  <div class="ui-g-6 ui-g-offset-3">
+    <div class="ui-g">
+      <div 
+      class="ui-g-1 stone" 
+      [ngStyle]="stoneStyle"
+      *ngFor="let stone of stones;" 
+      [id]="'stone-' + stone.id"
+      [class.empty]="stone.state==='empty'" 
+      [class.me]="stone.state==='me'" 
+      [class.enemy]="stone.state==='enemy'" 
+      (click)="onClick(stone.id)" ></div>
+    </div>
+  </div>
+</div>

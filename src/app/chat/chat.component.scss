@@ -1,0 +1,17 @@
+#Chat {
+    position: fixed;
+    right: 3rem;
+    bottom: 1rem;
+}
+:host ::ng-deep  {
+    & .custom .ui-toast-message-info {
+        border-radius: 5px;
+        color: white;
+        background: linear-gradient(to right top, indigo, #2980b9, #6dd5fa, white)!important;
+    }
+    & .custom .ui-toast-message-warn {
+        color: white;
+        border-radius: 5px;
+        background: linear-gradient(to right top, #b20a2c, white)!important;
+    }
+}
