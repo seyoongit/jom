@@ -1,13 +1,18 @@
-const app = require("express")();
-// app.use(require("morgan")("short"));
-// app.use(require("cors")());
+const express = require("express");
+const app = express();
 const http = require("http").Server(app);
 const io = require("socket.io")(http)
+app.use(require("morgan")("short"));
+app.use(require("cors")());
+app.use(express.static("../dist/jom"))
+app.get("/", (req, res) => {
+    res.sendFile("index.html")
+})
 http.listen(8080)
+
 
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = "IU";
-
 const heapq = require("heapq");
 const Q = [];
 const dodge = [];
