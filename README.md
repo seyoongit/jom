@@ -162,7 +162,7 @@ getTurn을 수신받은 상대방은 이제 본인의 수를 둘수 있다.  <br
 ### 스택
 
 ###### Angular 6
-메인 프레임워크
+클라이언트 프레임워크
 [Angular](https://angular.io/)
 
 ###### RxJS
