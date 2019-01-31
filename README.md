@@ -24,7 +24,7 @@ Angular를 공부하기위해 진행한 프로젝트이다.  <br>
 이를위해 socket.io를 Angular에 맞게 포팅한 라이브러리인 ngx-socket-io 라는걸 사용했다.  <br>
 <br>
 
-![jom_socketevent](https://user-images.githubusercontent.com/47002080/52044642-f9014980-2585-11e9-83e5-c36613edcc38.png)
+![jom_socketevent](https://user-images.githubusercontent.com/47002080/52045330-a4f76480-2587-11e9-9fff-48571366d34b.png)
 
 각각의 이벤트를 설명하자면 다음과 같다. <br>
 
