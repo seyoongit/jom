@@ -9,7 +9,7 @@ Angular를 공부하기위해 진행한 프로젝트이다.  <br>
 
 ### 구조
 
-![jom_structure](https://lh3.googleusercontent.com/t54OEPmAw9J4HRNXmkAy4VZTzyqOZ3X-zd8f-sdsnAZIhd1ivFrKpG1XiPYV_qonit9n8dl3Iq5GBugYqzK12qpyd-nr_EutQdxX5XzQhBApESHGM28QVJHpjXjSoHC8t03n5c5ud0UtQiJJ7sXaEDIu_NFKucfG9Rvn6sn8tn_HX8Fqhizb9Esfo8oCLSgsYcl7yksSE6FrO2EBclssLgbbFZTHHQsZ8soDN7d1-QbTLiLbWNk_0xidS4Rb5K0H3zRpiaNb82-9_Bxc0FcSwBChF0h9w8Av5nOoNcQInDIbzQhZZ7U0HgX1jjgZvlRTJ5J7wVTdgacCvCM3XxKZFXnXf0EwRy98Er-EENUXJX3kL0R-f_eYMNFzaS0p-xeHzDOD9ha0n-O3rOy6azbkwSyJSvZmCWYstXK5V8tLKped4fIEgYY9pmwWaJb9UZsZh3sjtL-4mvpTAcc81PQnvIxUi_zzPvpLASCJ8Vslv8rVnWTjMF54bJnX7ln2ZDOXZE06Vz7eRqKT7QzPMp8MC4c0Hie83RYxP_8_L8fvqKkBJo1gOdeTxTSM3TloqY6VCMWLnS4h0gzdJjDYInqSf8FpeXQJ4PlwWZkkVDRiK4zq-s-IpACdQJ31O8os4gmqIOXDaVLayKRlEtXko-P5joMM=w806-h626-no)
+![jom_structure](https://user-images.githubusercontent.com/47002080/52044597-e38c1f80-2585-11e9-97f0-57facdf837b6.png)
 
 <br>
 그림상엔 컴포넌트가 5개지만 TopNav와 Footer는 자리만 차지하고 사실상 아무기능도 안하기 때문에 주로 일하는 컴포넌트는 Board, Chat, Modal 3개이다.   
@@ -24,7 +24,7 @@ Angular를 공부하기위해 진행한 프로젝트이다.  <br>
 이를위해 socket.io를 Angular에 맞게 포팅한 라이브러리인 ngx-socket-io 라는걸 사용했다.  <br>
 <br>
 
-![jom_socketEvent](https://lh3.googleusercontent.com/GRPSClDJftB0Ii_inAeMgHWW-9g6Vv6nZRWwi3y3Sa4p43bvZhY-NN1ANdIzYQrnQQfuPhbM6NQaHBbURxIP05d4u58ALThewjx8zM4GzU_QO_a6LtlzZzXe0-Bo_3dGG63ez5L3hKlpZO6ZR-GwaO58mzhz7-dCkW49QdFbTCNqo9ZQKeAvUODjdlotILrWyhIEBkVWSXxcFGQ-zZLSof_U5ybFjKt4GVjoWV92snZG7ECiB0iMC2GErVVxoRGNdaMbVjM6mi5EOo3LISAmK7feXGv-FryKrd1zQBZjZgEBA9u4Er-KcfgW9za-qDVuit59k3MZo-dJP-ABurY9oe_3EbK0aLC9-LMxN0cLl0P68PbflPfyYWBeReZi9nAv1r9C2ZJmXwKwEx5m-gsxquFBYR_U5p2DUT1Hghcs_wq18NI8WRi3_hmMrEYV9vJW5mnG7_ovcuVUb6KqzH4LiCy9HXA05E2ukcEJjlDLZDWGb9gf8H3SNJXbfBX6JaVaN4Qe7dceGEqDru-2GJVt_gwWqmlV-J9vXCDKK7aDsrWcFL6WY8UDKbqb0a5uCoFHX5q_WR3Kji52JbmROyUxgVbUMjv28UgwSunM_wAuTZBfE9dWuYv-yHkI2bZXZBpgAUmE9mEip9DJ0tvJNQD-mpMK=w664-h626-no)
+![jom_socketevent](https://user-images.githubusercontent.com/47002080/52044642-f9014980-2585-11e9-83e5-c36613edcc38.png)
 
 각각의 이벤트를 설명하자면 다음과 같다. <br>
 
@@ -111,7 +111,7 @@ getTurn을 수신받은 상대방은 이제 본인의 수를 둘수 있다.  <br
 
 ###### 대기자큐와 닷지큐
 
-![waitQ_dodgeQ](https://lh3.googleusercontent.com/kTJOxJIvDpz6zNrqc7w16FEYc7ErjW70Es9M-l73ePOgQAGp-uyaX-k0-EpdrlTEmbXSuPWWvx12hjOFByou42e3RWfPgRlZzq8TjoK4Lbtyvwky4TwKAkbxndiBLjzoPVYSzO9fO9mEELN151I23ceqjWkAhUqKM6ieyHyMh1g42-j0yfaOQiIymw405uc2MIsgXauJctzLtt9N7ru-7FsPzPwAyrB0t0VCv9n6wtq6zCJtILf8n_huo5THSo9pKv-6X0iE12c3zPL5HeRohhIUJg3yC3ldHKzu5Kip1qXSYPaB0v-Ec59-eHIwp27vvntQ0y1yTtF8wGOlFMTs6xT3jpOI9jUlaEg24xm4YU122O6r6l9Z70VOmwxgtCJBUP3Kjd1gzit0oOKRH26j0j3LQdk0P_NpBCBLWOITbInZUnnmjuLbjX650qONIvVF4o8YElhmtGchEk_6TJtojOti2pxt0LEPYOn9f8awdv6cvt_nUcEJzt9zu0akVDTuSa1T94SYzE_IDPPLDlGnW4u3qJxrq-EH72FqnodHj6hqdCImNaeFifhuF8tEIq1_NuqnrpPhykQMTxyWvkslBhY8gDjzERiX-40Ss8oYVdKYIeEKADgVB5CvPeSs_Jzc_TJJ8HOKiDqs-f0cuWhgb7sn=w728-h406-no)
+![jom_waitq_dodgeq](https://user-images.githubusercontent.com/47002080/52044666-0cacb000-2586-11e9-9abe-9805086cc9bc.png)
 
 1:1 게임이기 때문에 그림과 같이 복잡한 구조의 자료구조들은 사실 이론상 필요가 없다. 그냥 '대기자' 변수 하나만 둔다음  <br>
 1. 사용자 A가 게임시작! 버튼을 누르면 A의 소켓 아이디를 '대기자' 변수에 할당한다.  <br>
@@ -214,4 +214,5 @@ ActiveRoute 라는 컴포넌트를 불러오면 여기에 현재url, path, path 
 <br>
 <br>
 
-![춤추는파이리](https://lh3.googleusercontent.com/8KbpOKiDe_RDR_x746GwzTkg_aOXTImBf7nnyyD2wbMsdbiEyIO9mD98hV3Xy_VYFfuVkm7sLZ7TWZ0lWq2MFohAf_XRxaHmL_AzUMl8gG9lO3Me9i2AooBJKhvuMYxavuFVdYOfMmffPJp9_6umfuPN7Jq3Kd98bLlAHcaar0DQ0Ema9sg0YvcUb7LWpMCdeyP5dHUHTjVKupR3l_zX4vAD5QcWDASO9mSCQ8iz1iRNbhwImZjglTRWMnuBugdp5avwvpawbCbx6RBPGQ19lOSTXupKOxg31QQtqfqcQeGRbxNqwjUeTOU9kW22BDs9rl9arZymTmpTpotttvrFd0ANZbdCxWCeblsEjET9ya6xnlfZgFXxHrdVFeyo1w0yzzU6QQZpXvLvVCxBVy5XAFP04A-ZP1n_8Pi35tmG5I4VyTO7GH7LkY-hUFQraewlxhrJbKSzcCTp0QUuw2iR80yBO9xkpZwLqjCF-eXxSnj8_BmW-iOTzDPp51wX7DH9rIzYT1YhWdiHuNOae_wjsO0ULXRnOwrUeIP9Jm8iTsmZedBzm3LTGNV3JRlge5QSPSgvayoCqDxzyJ-spP2zETHlwwp72lghhq0FWpuimF1gCOVNml_3JR9nducTdqX_w-nlrSbWKxRcOrrs0VPn65zf=w300-h184-no)
+![dancing_firy](https://user-images.githubusercontent.com/47002080/52044708-21894380-2586-11e9-8932-4530a8dc0f86.gif)
+
