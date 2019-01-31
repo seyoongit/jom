@@ -39,10 +39,10 @@ Angular를 공부하기위해 진행한 프로젝트이다.
 > queueStart & queueStop  <br>
 
 닉네임을 등록한다음엔 큐를 돌리는 모달창이 뜬다.  <br>
-게임시작! 버튼을 누르면 queueStart를 발송하며, 서버는 사용자의 소켓 아이디를 대기자큐에 추가한다.  <br>
+게임시작! 버튼을 누르면 queueStart를 발송하며, 서버는 플레이어를 대기자큐에 추가한다.  <br>
 서버의 대기자큐는 힙으로 구현했는데 자세한 내용은 밑에서 더 설명하겠다.  <br>
 <br>
-게임시작! 버튼을 또 누르면 queueStop을 발송하며, 서버는 사용자의 소켓 아이디를 '닷지한사람' 큐에 추가한다.  <br>
+게임시작! 버튼을 또 누르면 queueStop을 발송하며, 서버는 플레이어를 '닷지한사람' 큐에 추가한다.  <br>
 '닷지한사람' 큐 역시 힙으로 구현되어있다.
 <br>
 
@@ -51,7 +51,7 @@ Angular를 공부하기위해 진행한 프로젝트이다.
 사용자가 브라우져를 그냥 꺼버리거나 하면 disconnect 이벤트가 발생한다.  <br>
 이 경우 케이스가 두갈래로 나뉘는데  <br>
 <br>
-1. 게임은 아직 시작하지 않았지만 큐를 돌리던 중이었다면 '닷지한사람' 큐에 해당 소켓의 아이디를 추가한다.  <br>
+1. 게임은 아직 시작하지 않았지만 큐를 돌리던 중이었다면 '닷지한사람' 큐에 해당 플레이어를 추가한다.  <br>
 2. 게임이 진행되던 도중이면 상대방에게 '당신이 이겼다' 라는 이벤트를 보낸다. 이걸 받은 상대방 클라이언트는 "상대방이 탈주했습니다" 라는 메세지와 함께 승리했다는 모달을 띄운다.  <br>
 <br>
 그리고 그림엔 안나와 있지만 큐를 돌리던중도 아니고 게임을 하던중도 아니라면 그냥 아무동작도 하지 않는다.  <br>
@@ -103,20 +103,20 @@ getTurn을 수신받은 상대방은 이제 본인의 수를 둘수 있다.  <br
 
 ![waitQ_dodgeQ](https://lh3.googleusercontent.com/kTJOxJIvDpz6zNrqc7w16FEYc7ErjW70Es9M-l73ePOgQAGp-uyaX-k0-EpdrlTEmbXSuPWWvx12hjOFByou42e3RWfPgRlZzq8TjoK4Lbtyvwky4TwKAkbxndiBLjzoPVYSzO9fO9mEELN151I23ceqjWkAhUqKM6ieyHyMh1g42-j0yfaOQiIymw405uc2MIsgXauJctzLtt9N7ru-7FsPzPwAyrB0t0VCv9n6wtq6zCJtILf8n_huo5THSo9pKv-6X0iE12c3zPL5HeRohhIUJg3yC3ldHKzu5Kip1qXSYPaB0v-Ec59-eHIwp27vvntQ0y1yTtF8wGOlFMTs6xT3jpOI9jUlaEg24xm4YU122O6r6l9Z70VOmwxgtCJBUP3Kjd1gzit0oOKRH26j0j3LQdk0P_NpBCBLWOITbInZUnnmjuLbjX650qONIvVF4o8YElhmtGchEk_6TJtojOti2pxt0LEPYOn9f8awdv6cvt_nUcEJzt9zu0akVDTuSa1T94SYzE_IDPPLDlGnW4u3qJxrq-EH72FqnodHj6hqdCImNaeFifhuF8tEIq1_NuqnrpPhykQMTxyWvkslBhY8gDjzERiX-40Ss8oYVdKYIeEKADgVB5CvPeSs_Jzc_TJJ8HOKiDqs-f0cuWhgb7sn=w728-h406-no)
 
-1:1 게임이기 때문에 그림과 같이 복잡한 구조의 자료구조들은 사실 필요가 없다. 그냥 '대기자' 변수 하나만 둔다음  <br>
+1:1 게임이기 때문에 그림과 같이 복잡한 구조의 자료구조들은 사실 이론상 필요가 없다. 그냥 '대기자' 변수 하나만 둔다음  <br>
 1. 사용자 A가 게임시작! 버튼을 누르면 A의 소켓 아이디를 '대기자' 변수에 할당한다.  <br>
 2. 이후 사용자 B가 게임시작! 버튼을 누르면 A와 B를 매치시키고 '대기자' 변수에는 null 을 할당해서 비운다.  <br>
 <br>
 이 두가지 과정을 반복하기만 하면 충분하다.  <br>
-하지만 실제 서비스에서는 타이밍이 어떻게 꼬일지 모르기 때문에 좀더 넉넉하게 처리할수 있게끔 큐를 사용했다.  <br>
+하지만 실제 서비스에서는 타이밍이 어떻게 꼬일지 모르기 때문에 좀더 넉넉하게 처리할수 있게끔 우선순위 큐를 사용했다.  <br>
 <br>
 과정은 다음과 같다.  <br>
 1. 일단 소켓이 서버와 처음 연결되면 서버는  Date.now() 로 해당 소켓에 타임스탬프를 할당한다.  <br>
-그림상에 보이는 숫자가 바로 이 타임스탬프이며 힙은 이 타임스탬프를 기준으로 정렬한다.  <br>
+그림상에 보이는 숫자가 바로 이 타임스탬프이며 우선순위큐(heap)은 이 타임스탬프를 기준으로 정렬한다.  <br>
 <br>
 2. 어떤 사용자가 게임시작! 을 누르면 대기자큐에서 pop으로 하나 빼서 매치시킨다.  <br>
 <br>
-3. 큐가 비었을 경우엔 큐에 사용자의 아이디를 추가하는 방식이다.   <br>
+3. 큐가 비었을 경우엔 큐에 [socket.timestamp, socket.id] 를 추가하는 방식이다.   <br>
 <br>
 문제는 큐를 돌리는 중에 닷지를한 경우이다.  <br>
 사용자가 의도적으로 닷지하지 않았더라도 정전으로 브라우져가 그냥 꺼지거나 하는 돌발상황은 충분히 있을 수 있다.  <br>
