@@ -12,7 +12,7 @@ http.listen(8080)
 
 
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "이 Jwt 키값은 실제 서버의 jwt 키는 다릅니다";
+const JWT_SECRET = "이 Jwt 키값은 실제 서버의 jwt 키와는 다릅니다";
 const heapq = require("heapq");
 const Q = [];
 const dodge = [];
