@@ -209,4 +209,7 @@ ActiveRoute 라는 컴포넌트를 불러오면 여기에 현재url, path, path 
 <br>
 단점은 역시나 급격한 러닝커브, 그리고 개인 또는 소규모의 간단한 프로젝트를 진행하기엔 프레임워크가 너무 방대하다는 것이다. 컴포넌트는 사용자에게 보여지는 뷰기능만 담당하고 구체적인 로직은 Service라는 컨셉으로 분리한다는 점은 상당히 매력적이지만 어쨌든 그 점 자체가 프레임워크를 복잡하게 만드는지라 장점이자 단점이 될수도 있다고 생각한다.  <br>
 <br>
+<br>
+<br>
+
 ![춤추는파이리](https://lh3.googleusercontent.com/8KbpOKiDe_RDR_x746GwzTkg_aOXTImBf7nnyyD2wbMsdbiEyIO9mD98hV3Xy_VYFfuVkm7sLZ7TWZ0lWq2MFohAf_XRxaHmL_AzUMl8gG9lO3Me9i2AooBJKhvuMYxavuFVdYOfMmffPJp9_6umfuPN7Jq3Kd98bLlAHcaar0DQ0Ema9sg0YvcUb7LWpMCdeyP5dHUHTjVKupR3l_zX4vAD5QcWDASO9mSCQ8iz1iRNbhwImZjglTRWMnuBugdp5avwvpawbCbx6RBPGQ19lOSTXupKOxg31QQtqfqcQeGRbxNqwjUeTOU9kW22BDs9rl9arZymTmpTpotttvrFd0ANZbdCxWCeblsEjET9ya6xnlfZgFXxHrdVFeyo1w0yzzU6QQZpXvLvVCxBVy5XAFP04A-ZP1n_8Pi35tmG5I4VyTO7GH7LkY-hUFQraewlxhrJbKSzcCTp0QUuw2iR80yBO9xkpZwLqjCF-eXxSnj8_BmW-iOTzDPp51wX7DH9rIzYT1YhWdiHuNOae_wjsO0ULXRnOwrUeIP9Jm8iTsmZedBzm3LTGNV3JRlge5QSPSgvayoCqDxzyJ-spP2zETHlwwp72lghhq0FWpuimF1gCOVNml_3JR9nducTdqX_w-nlrSbWKxRcOrrs0VPn65zf=w300-h184-no)
