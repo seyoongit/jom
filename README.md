@@ -1,6 +1,6 @@
 # Just Omok  
 
-Angular를 공부하기위해 진행한 프로젝트이다.  <br>
+Angular를 공부하기위해 진행한 프로젝트  <br>
 <br>
 [그냥 오목두는 사이트](http://jom.cool)   <br>
 <br>
