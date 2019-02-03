@@ -219,8 +219,10 @@ ActiveRoute 라는 컴포넌트를 불러오면 여기에 현재url, path, path 
 <br>
 컴포넌트는 사용자에게 보여지는 뷰기능만 담당하고 구체적인 로직은 Service라는 컨셉으로 분리한다는 점은 상당히 매력적이지만 어쨌든 그 점 자체가 프레임워크를 크고 복잡하게 만드는지라 장점이자 단점이 될수도 있다고 생각한다.  <br>
 <br>
+여튼 이렇게 react, vue, angualr 하나씩 사용해보기 계획중 하나인 angular 프로젝트가 끝이 났다.
+<br>
 <br>
 <br>
 
-![](https://user-images.githubusercontent.com/47002080/52044708-21894380-2586-11e9-8932-4530a8dc0f86.gif)
+![happy_firy](https://user-images.githubusercontent.com/47002080/52044708-21894380-2586-11e9-8932-4530a8dc0f86.gif)
 
