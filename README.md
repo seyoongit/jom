@@ -105,7 +105,7 @@ getTurn을 수신받은 상대방은 이제 본인의 수를 둘수 있다.  <br
 
 그림에는 안나왔지만 matched 이벤트가 있다.  <br>
 <br>
-게임이 잡히고 상대방이 정해지면 서버에서 클라이언트로 matched가 발송되며, matched를 수신받은 클라이언트는 큐를 잡고있는 상태인지 아닌지를 표현하는 'isQueueing' 프로퍼티를 true에서 false로 바꾼다.  <br>
+게임이 잡히고 상대방이 정해지면 서버에서 클라이언트로 matched가 발송되며, matched를 수신받은 클라이언트는 큐를 돌리는 중인지 아닌지를 표현하는 'isQueueing' 프로퍼티를 true에서 false로 바꾼다.  <br>
 <br>
 <br>
 <br>
