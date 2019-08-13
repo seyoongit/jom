@@ -1,3 +1,7 @@
+#Deprecated
+
+이 프로젝트는 중단됬으며 호스팅을 내렸습니다.
+
 # Just Omok  
 
 Angular를 공부하기위해 진행한 프로젝트  <br>
